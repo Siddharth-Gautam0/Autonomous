@@ -18,7 +18,7 @@ import ntpath
 from sklearn.utils import shuffle
 from sklearn.model_selection import train_test_split
 
-datadir = 'C:\Sid\Projects\SelfDrivingCar'
+datadir = 'Your path here'
 columns = ['center', 'left', 'right', 'steering', 'throttle', 'reverse', 'speed']
 data = pd.read_csv(os.path.join(datadir, 'driving_log.csv'), names = columns)
 
@@ -107,4 +107,4 @@ model = nvidia_model()
 
 history = model.fit(X_train, Y_train, epochs=3, validation_data=(X_valid, Y_valid), batch_size=32, verbose=1, shuffle=0)
 
-model.save('C:\Sid\Projects\SelfDrivingCar\Excess\OldDataS0.h5')
+model.save('Your path here .h5')
